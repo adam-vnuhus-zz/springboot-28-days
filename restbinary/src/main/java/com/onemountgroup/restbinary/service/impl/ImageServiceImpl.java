@@ -7,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -50,22 +49,12 @@ public class ImageServiceImpl implements ImageService {
     public String storeFile(MultipartFile file, String description) {
         // Normalize file name
         String originalFileName = StringUtils.cleanPath(file.getOriginalFilename());
-        String fileName = "";
 
         try {
             // Check if the file's name contains invalid characters
             if (originalFileName.contains("..")) {
                 throw new ImageException("Sorry! Filename contains invalid path sequence " + originalFileName);
             }
-            String fileExtension = "";
-
-            try {
-                fileExtension = originalFileName.substring(originalFileName.lastIndexOf("."));
-            } catch (Exception e) {
-                fileExtension = "";
-            }
-
-            fileName = "_" + description + fileExtension;
 
             // Copy file to the target location (Replacing existing file with the same name)
             Path targetLocation = this.fileStorageLocation.resolve(originalFileName);
