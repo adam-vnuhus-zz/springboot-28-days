@@ -35,7 +35,7 @@ public class ImageController {
 
     @GetMapping()
     public ResponseEntity<List<ImagePOJO>> getImages() {
-        return ResponseEntity.ok().header("onemount", "specialvalue").body(imageServiceImpl.getAll());
+        return ResponseEntity.ok().body(imageServiceImpl.getAll());
     }
 
     @GetMapping("/{id}")
