@@ -31,7 +31,7 @@ public class Image {
     @Column(name = "file_name")
     private String fileName;
 
-    @Column(name = "description",length = 300, nullable = true)
+    @Column(name = "description",length = 500, nullable = true)
     private String description;
 
     @Column(name = "upload_dir")

@@ -6,7 +6,7 @@ import com.onemountgroup.restbinary.model.ImagePOJO;
 
 public interface ImageService {
     
-    ImagePOJO findById(Long id);
+    public ImagePOJO findById(Long id);
 
     public List<ImagePOJO> getAll();
 }
