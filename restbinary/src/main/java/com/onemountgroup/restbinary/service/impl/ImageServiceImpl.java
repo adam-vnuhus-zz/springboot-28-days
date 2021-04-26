@@ -27,6 +27,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class ImageServiceImpl implements ImageService {
 
@@ -63,13 +66,21 @@ public class ImageServiceImpl implements ImageService {
             Image newImage = new Image();
             newImage.setFileName(originalFileName);
             newImage.setDescription(description);
-            newImage.setLink(ServletUriComponentsBuilder.fromCurrentContextPath().path("/static/")
+            newImage.setLink(ServletUriComponentsBuilder.fromCurrentContextPath()
                     .path(originalFileName).toUriString());
             imageRepository.save(newImage);
+
+            // log.info("inputStream: " + inputStream);
+            log.info("originalName: " + originalFileName);
+            // log.info("name: " + name);
+            log.info("contentType: " + file.getContentType());
+            log.info("size: " + file.getSize());
+            log.info("description: " + description);
 
             return originalFileName;
 
         } catch (IOException ex) {
+            log.error("Error when file.getOriginalFilename", ex.getMessage());
             throw new ImageException("Could not store file " + originalFileName + ". Please try again!", ex);
         }
     }

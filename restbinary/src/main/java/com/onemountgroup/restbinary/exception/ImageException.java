@@ -11,11 +11,18 @@ public class ImageException extends RuntimeException {
         this.status = status;
     }
 
+    public ImageException(String message, HttpStatus status) {
+        super(message, null, false, false);
+        this.status = status;
+      }
+
     public ImageException(String message) {
-        super(message);
+        super(message, null, false, false);
+        this.status = HttpStatus.BAD_REQUEST;
     }
 
     public ImageException(String message, Throwable cause) {
-        super(message, cause);
+        super(message, cause, false, false);
+        this.status = HttpStatus.BAD_REQUEST;
     }
 }
