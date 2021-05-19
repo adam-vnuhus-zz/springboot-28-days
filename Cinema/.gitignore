@@ -33,5 +33,5 @@ build/
 .vscode/
 .gitignore
 
-.mvn/
+.mvn/wrapper/
 

@@ -32,8 +32,9 @@ build/
 ### VS Code ###
 .vscode/
 
-#.gitignore
+.gitignore
 
 logs/
 13-JPARelationship/
 static/
+mygateway/
