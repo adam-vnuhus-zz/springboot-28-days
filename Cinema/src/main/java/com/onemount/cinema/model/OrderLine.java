@@ -37,5 +37,6 @@ public class OrderLine {
     private Customer customer;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id")
     private Order order;
 }

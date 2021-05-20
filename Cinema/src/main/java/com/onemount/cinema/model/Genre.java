@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Set;
 
 @Data
-@NoArgsConstructor
 @Entity(name = "genre")
 @Table(name = "genre")
 public class Genre {
@@ -21,14 +20,15 @@ public class Genre {
 
     private String name;
 
-    private String description;
-
-    @ManyToMany(mappedBy = "genres", fetch = FetchType.LAZY)
+    @ManyToMany(
+        cascade = CascadeType.ALL, 
+        mappedBy = "genres", 
+        fetch = FetchType.LAZY)
     @JsonBackReference
     private List<Film> films = new ArrayList<>();
 
-    public Genre(String name, String description){
+    public Genre(String name) {
         this.name = name;
-        this.description = description;
     }
+
 }

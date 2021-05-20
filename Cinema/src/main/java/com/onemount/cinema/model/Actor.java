@@ -20,13 +20,17 @@ public class Actor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String name;
+    @Column(name = "full_name")
+    private String fullName;
 
     private int age;
 
     private String country;
 
-    @ManyToMany(mappedBy = "actors", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(
+        cascade = CascadeType.ALL,
+        mappedBy = "actors", 
+        fetch = FetchType.LAZY)
     @JsonBackReference
     private List<Film> films = new ArrayList<>();
 
