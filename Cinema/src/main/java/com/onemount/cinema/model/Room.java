@@ -1,10 +1,13 @@
 package com.onemount.cinema.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -18,5 +21,10 @@ public class Room {
 
     private String name;
 
-//    private Cinema cinema;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Cinema cinema; // Mỗi comment phải gắn vào một post
+
+    @OneToMany(mappedBy = "room")
+    private List<Event> events = new ArrayList<>();
 }

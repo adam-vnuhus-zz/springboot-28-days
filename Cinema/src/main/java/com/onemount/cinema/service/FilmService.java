@@ -7,6 +7,8 @@ import com.onemount.cinema.model.Actor;
 import com.onemount.cinema.model.Film;
 import com.onemount.cinema.model.Genre;
 import com.onemount.cinema.repository.FilmRepository;
+import com.onemount.cinema.repository.GenreRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,7 @@ import javax.transaction.Transactional;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FilmService {
@@ -27,6 +30,9 @@ public class FilmService {
     @Autowired
     private FilmRepository filmRepository;
 
+    @Autowired
+    private GenreRepository genreRepository;
+
     @Transactional
     public void generateFilm() throws ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -36,7 +42,8 @@ public class FilmService {
         Film film2 = new Film("MY SPY",
                 "When CIA field agent Jason Jones – or JJ (Dave Bautista) – is demoted to a light surveillance detail, he finds himself at the mercy of a sweet but determined 9-year-old girl, Sophie (Chloe Coleman), who uses her tech savviness and street smarts to find JJ’s undercover hideout near the apartment she shares with her mother. In exchange for not blowing JJ’s cover, Sophie convinces him to spend time with her and teach her to be a spy. Despite his reluctance, JJ finds he is no match for Sophie’s disarming charm, intelligence and aptitude for espionage (RE-RUN FROM MAY 5TH)",
                 "", formatter.parse("14/08/2020"), 101, Language.VN, Rated.C16, FilmStatus.INCOMING);
-
+        // Optional<Genre> action = genreRepository.findByName("Action");
+        // film1.addGenre(action.get());
         filmRepository.save(film1);
         filmRepository.save(film2);
     }

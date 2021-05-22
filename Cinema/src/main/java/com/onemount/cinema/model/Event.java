@@ -1,33 +1,44 @@
 package com.onemount.cinema.model;
 
-import com.onemount.cinema.enums.EventStatus;
-import lombok.AllArgsConstructor;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.util.Date;
-
+@Entity(name = "event_film")
+@Table(name = "event_film")
 @Data
-@NoArgsConstructor
-@Entity(name = "event")
-@Table(name = "event")
 public class Event {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-    private Date startTime;
+    @Column(name = "start")
+    private LocalDateTime startAt; // extra column
 
-    private Date endTime;
+    @Column(name = "end")
+    private LocalDateTime endAt;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="film_id")
+    private BigDecimal price;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "film_id")
     private Film film;
 
-//    private Seat seat;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "room_id")
+    private Room room;
 
-    private int price;
-
-    private EventStatus status;
 }

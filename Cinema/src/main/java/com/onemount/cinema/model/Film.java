@@ -1,6 +1,7 @@
 package com.onemount.cinema.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.onemount.cinema.enums.FilmStatus;
 import com.onemount.cinema.enums.Language;
@@ -59,22 +60,27 @@ public class Film {
         this.status = status;
     }
 
+    @OneToMany(mappedBy = "film")
+    @JsonIgnore // để tránh bị xuất ra quá nhiều dữ liệu lồng nhau
+    private List<Event> events = new ArrayList<>();
+
     @ManyToOne(fetch = FetchType.LAZY)
     private FilmDirector filmDirector;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-        name = "cast", 
-        joinColumns = @JoinColumn(name = "film_id"), 
-        inverseJoinColumns = @JoinColumn(name = "actor_id"))
+    @JoinTable(name = "cast", joinColumns = @JoinColumn(name = "film_id"), inverseJoinColumns = @JoinColumn(name = "actor_id"))
     @JsonManagedReference
     private List<Actor> actors = new ArrayList<>();
 
+    // @ManyToMany(
+    // cascade = CascadeType.ALL,
+    // mappedBy = "film",
+    // fetch = FetchType.LAZY)
+    // @JsonBackReference
+    // private List<Cinema> cinemas = new ArrayList<>();
+
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-        name = "film_genre", 
-        joinColumns = @JoinColumn(name = "film_id"), 
-        inverseJoinColumns = @JoinColumn(name = "genre_id"))
+    @JoinTable(name = "film_genre", joinColumns = @JoinColumn(name = "film_id"), inverseJoinColumns = @JoinColumn(name = "genre_id"))
     @JsonManagedReference
     private List<Genre> genres = new ArrayList<>();
 
