@@ -8,6 +8,7 @@ import com.onemount.cinema.enums.Language;
 import com.onemount.cinema.enums.Rated;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ import javax.persistence.*;
 import java.util.*;
 
 @Data
+// @Builder
 @NoArgsConstructor
 @Entity(name = "film")
 @Table(name = "film")

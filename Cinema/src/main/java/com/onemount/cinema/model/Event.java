@@ -2,6 +2,8 @@ package com.onemount.cinema.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,12 +15,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity(name = "event_film")
 @Table(name = "event_film")
 @Data
+@Builder
 public class Event {
 
     @Id
@@ -31,7 +35,7 @@ public class Event {
     @Column(name = "end")
     private LocalDateTime endAt;
 
-    private BigDecimal price;
+    private int price;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "film_id")

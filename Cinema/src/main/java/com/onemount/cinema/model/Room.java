@@ -21,9 +21,13 @@ public class Room {
 
     private String name;
 
+    public Room(String name) {
+        this.name = name;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
-    private Cinema cinema; // Mỗi comment phải gắn vào một post
+    private Cinema cinema;
 
     @OneToMany(mappedBy = "room")
     private List<Event> events = new ArrayList<>();
