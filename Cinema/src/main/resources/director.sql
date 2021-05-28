@@ -1,1 +1,0 @@
-insert into film_director(id, full_name, age) values (1, 'Tomoka Nagaoka', 29);
