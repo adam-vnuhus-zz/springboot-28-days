@@ -13,7 +13,7 @@
 	<name>vincinema</name>
 	<description>Giữ chỗ, đặt vé, thanh toán</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>15</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -82,8 +82,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				
 				<configuration>
-					<source>16</source>
-					<target>16</target>
+					<source>15</source>
+					<target>15</target>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
