@@ -37,6 +37,7 @@ public class FilmService {
     Genre hoiHop = genreRepo.findByName("Hồi hộp");
     Genre tamLy = genreRepo.findByName("Tâm lý");
     Genre giaDinh = genreRepo.findByName("Gia đình");
+    Genre thanThoai = genreRepo.findByName("Thần thoại");
 
     Film banTayDietQuy = Film.builder()
     .title("BÀN TAY DIỆT QUỶ")
@@ -84,19 +85,19 @@ public class FilmService {
     trumCuoiSieuDang.addGenre(hoiHop);
 
     Film cucNoHoaCucCung = Film.builder()
-    .title("CỤC NỢ HÓA CỤC CƯNG")
-    .description("Du-seok (Sung Dong Il) và Jong-bae (Kim Hiewon) là hai gã chuyên đòi nợ thuê có máu mặt. Để uy hiếp một con nợ, cả hai đã bắt Seung-yi (Park Soi) - một bé gái 9 tuổi làm vật thế chấp cho số nợ của mẹ cô bé. Tuy nhiên, mẹ của Seung-yi lại bị trục xuất về nước, và hai ông chú đành nhận trách nhiệm trông chừng Seung-yi đến khi cô bé được một gia đình giàu có nhận nuôi. Khi phát hiện ra Seung-yi nhỏ bé bị bán đi làm công cho một bà chủ vô trách nhiệm, Du-seok đã tìm đến để chuộc lại cô bé. Mặc dù Seung-yi vốn là \"cục nợ\" Du-seok và Jong-bae không hề mong muốn, cô bé dần trở thành cục cưng yêu quý và cả 3 sống bên nhau như một gia đình.")
-    .director("Kang Dae Kyu")
-    .actors("Sung Dong Il, Ha Ji Won, Kim Hiewon, Park Soi")
-    .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("09/10/2020"))
-    .language(Language.KR)
+    .title("GODZILLA VS. KONG")
+    .description("Khi hai kẻ thù truyền kiếp gặp nhau trong một trận chiến ngoạn mục, số phận của cả thế giới vẫn còn bị bỏ ngỏ… Bị đưa khỏi Đảo Đầu Lâu, Kong cùng Jia, một cô bé mồ côi có mối liên kết mạnh mẽ với mình và đội bảo vệ đặc biệt hướng về mái nhà mới. Bất ngờ, nhóm đụng độ phải Godzilla hùng mạnh, tạo ra một làn sóng hủy diệt trên toàn cầu. Thực chất, cuộc chiến giữa hai kẻ khổng lồ dưới sự thao túng của các thế lực vô hình mới chỉ là điểm khởi đầu để khám phá những bí ẩn nằm sâu trong tâm Trái đất.")
+    .director("Adam Wingard")
+    .actors("Millie Bobby Brown, Alexander Skarsgård, Rebecca Hall, Eiza González, Kyle Chandler")
+    .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("26/03/2021"))
+    .language(Language.EN)
     .hasVietSubTitle(true)
     .lengthInMinutes(113)
-    .rating(Rating.P)
+    .rating(Rating.C13)
     .build();
 
-    cucNoHoaCucCung.addGenre(hai);
-    cucNoHoaCucCung.addGenre(tamLy);
+    cucNoHoaCucCung.addGenre(hanhDong);
+    cucNoHoaCucCung.addGenre(thanThoai);
 
     em.persist(banTayDietQuy);
     em.persist(palmSpring);
