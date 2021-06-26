@@ -36,6 +36,7 @@ public class FilmService {
     Genre tinhCam = genreRepo.findByName("Tình cảm");
     Genre hoiHop = genreRepo.findByName("Hồi hộp");
     Genre tamLy = genreRepo.findByName("Tâm lý");
+    Genre giaDinh = genreRepo.findByName("Gia đình");
 
     Film banTayDietQuy = Film.builder()
     .title("BÀN TAY DIỆT QUỶ")
@@ -54,18 +55,18 @@ public class FilmService {
     banTayDietQuy.addGenre(kinhDi);
 
     Film palmSpring = Film.builder()
-    .title("PALM SPRINGS: MỞ MẮT THẤY HÔM QUA")
-    .description("Mở Mắt Thấy Hôm Qua (tựa gốc: Palm Springs) – đúng như tên gọi, bộ phim là một vòng lặp bất tận của thời gian, với thật nhiều những rắc rối lặp đi lặp lại không có điểm dừng. Anh chàng Nyles (Andy Samberg) và nàng phù dâu bất đắc dĩ Sarah (Cristin Milioti) tình cờ gặp nhau tại đám cưới ở Palm Springs, mọi thứ trở nên phức tạp khi Nyles và Sarah “mắc kẹt” mãi ở ngày vui của người khác. Trong khi Sarah điên cuồng tìm cách thoát ra thì Nyles bình thản chấp nhận sống lại ngày hôm qua thêm một lần nữa. Họ sẽ làm gì để có thể thoát khỏi nơi này, thoát khỏi những vấn đề của chính mình khi giờ đây còn “vướng” phải nhau nữa?")
-    .director("Max Barbakow")
-    .actors("Andy Samberg, Cristin Milioti, J.K. Simmons")
-    .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("05/03/2021"))
-    .language(Language.EN)
-    .hasVietSubTitle(true)
-    .lengthInMinutes(89)
-    .rating(Rating.C18)
+    .title("BỐ GIÀ")
+    .description("Phim sẽ xoay quanh lối sống thường nhật của một xóm lao động nghèo, ở đó có bộ tứ anh em Giàu - Sang - Phú - Quý với Ba Sang sẽ là nhân vật chính, hay lo chuyện bao đồng nhưng vô cùng thương con cái. Câu chuyện phim tập trung về hai cha con Ba Sang (Trấn Thành) và Quắn (Tuấn Trần). Dù yêu thương nhau nhưng khoảng cách thế hệ đã đem đến những bất đồng lớn giữa hai cha con. Liệu cả hai có thể cho nhau cơ hội thấu hiểu đối phương, thu hẹp khoảng cách và tạo nên hạnh phúc từ sự khác biệt?")
+    .director("Vũ Ngọc Đãng & Trấn Thành")
+    .actors("Trấn Thành, Tuấn Trần, Ngân Chi, NSND Ngọc Giàu, Lê Giang, Lan Phương, Hoàng Mèo, La Thành, Quốc Khánh, Lê Trang, A Quay, Bảo Phúc,…")
+    .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("12/03/2021"))
+    .language(Language.VN)
+    .hasVietSubTitle(false)
+    .lengthInMinutes(128)
+    .rating(Rating.C13)
     .build();
     palmSpring.addGenre(hai);
-    palmSpring.addGenre(tinhCam);
+    palmSpring.addGenre(giaDinh);
 
 
     Film trumCuoiSieuDang = Film.builder()
