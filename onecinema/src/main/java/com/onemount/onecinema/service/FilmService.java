@@ -65,6 +65,7 @@ public class FilmService {
     .hasVietSubTitle(false)
     .lengthInMinutes(128)
     .rating(Rating.C13)
+    .thumbnail("https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202102/10656_103_100004.jpg")
     .build();
     palmSpring.addGenre(hai);
     palmSpring.addGenre(giaDinh);
@@ -80,6 +81,7 @@ public class FilmService {
     .hasVietSubTitle(true)
     .lengthInMinutes(101)
     .rating(Rating.C18)
+    .thumbnail("https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202104/10729_103_100001.jpg")
     .build();
     trumCuoiSieuDang.addGenre(hanhDong);
     trumCuoiSieuDang.addGenre(hoiHop);
@@ -94,6 +96,7 @@ public class FilmService {
     .hasVietSubTitle(true)
     .lengthInMinutes(113)
     .rating(Rating.C13)
+    .thumbnail("https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202103/10708_103_100002.jpg")
     .build();
 
     cucNoHoaCucCung.addGenre(hanhDong);
