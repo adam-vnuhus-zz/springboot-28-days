@@ -49,7 +49,7 @@ public class FilmService {
     .hasVietSubTitle(true)
     .lengthInMinutes(128)
     .rating(Rating.C18)
-    .thumbnail("thumbnail")
+    .thumbnail("https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202103/10714_103_100002.jpg")
     .build();
 
     banTayDietQuy.addGenre(hanhDong);
