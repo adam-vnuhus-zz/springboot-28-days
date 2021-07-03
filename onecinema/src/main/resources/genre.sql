@@ -13,3 +13,4 @@ INSERT INTO genre(name) VALUES('Khoa học viễn tưởng');
 INSERT INTO genre(name) VALUES('Gia đình');
 INSERT INTO genre(name) VALUES('Thần thoại');
 INSERT INTO genre(name) VALUES('Kinh dị');
+INSERT INTO genre(name) VALUES('Phiêu lưu');
