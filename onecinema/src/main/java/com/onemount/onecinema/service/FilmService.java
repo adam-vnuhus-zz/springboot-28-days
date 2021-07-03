@@ -113,7 +113,7 @@ public class FilmService {
         .director("Nhất Trung").actors("Diễm My, Ninh Dương Lan Ngọc, Nhã Phương...")
         .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("11/08/2021")).language(Language.VN).hasVietSubTitle(false)
         .lengthInMinutes(120).rating(Rating.C16)
-        .thumbnail("https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/1/9/1990_-_payoff_poster_-_kc_21042021_1_.a").build();
+        .thumbnail("https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/1/9/1990_-_payoff_poster_-_kc_21042021_1_.jpg").build();
     phim1990.addGenre(tinhCam);
     phim1990.addGenre(hai);
 
