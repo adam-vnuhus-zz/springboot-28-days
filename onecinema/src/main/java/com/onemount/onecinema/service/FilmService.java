@@ -105,8 +105,8 @@ public class FilmService {
         .thumbnail(
             "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202003/10444_103_100002.jpg")
         .build();
-    banNangHoangDai.addGenre(hanhDong);
-    banNangHoangDai.addGenre(phieuLuu);
+    goaPhuDen.addGenre(hanhDong);
+    goaPhuDen.addGenre(phieuLuu);
 
     Film phim1990 = Film.builder().title("1990").description(
         "Bộ phim ‘1990’ là cú bắt tay giữa ba ngọc nữ tuổi Ngọ của điện ảnh Việt: Diễm My - Ninh Dương Lan Ngọc và Nhã Phương. ‘1990’ thuộc thể loại Hài - Tình cảm, có nội dung xoay quanh một hội bạn thân gồm ba cô gái với ba cá tính khác nhau. Khi ngưỡng tuổi “30 chênh vênh” ập đến với cả ba vào cùng một thời điểm, hàng loạt những vấn đề về hôn nhân, tình yêu, sự nghiệp,... lần lượt xuất hiện, buộc họ phải giúp đỡ nhau vượt qua cột mốc đầy sóng gió này. ‘1990’ do đạo diễn Nhất Trung cầm trịch, dự kiến ra mắt vào ngày 21.04.2021.")
@@ -114,8 +114,8 @@ public class FilmService {
         .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("11/08/2021")).language(Language.VN).hasVietSubTitle(false)
         .lengthInMinutes(120).rating(Rating.C16)
         .thumbnail("https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/1/9/1990_-_payoff_poster_-_kc_21042021_1_.a").build();
-    banNangHoangDai.addGenre(tinhCam);
-    banNangHoangDai.addGenre(hai);
+    phim1990.addGenre(tinhCam);
+    phim1990.addGenre(hai);
 
     Film bayNgotNgao = Film.builder().title("BẪY NGỌT NGÀO").description(
         "Sau một thời gian dài không gặp, cuộc sống của mỗi thành viên trong hội ế đều có nhiều thay đổi. Camy là người duy nhất “thoát ế” với cuộc sống đáng mơ ước bên người chồng tài hoa Đăng Minh. Quỳnh Lam đã là một nhà thiết kế nổi tiếng, Linh Đan là một luật sư thành đạt, còn Ken trở thành ông chủ phòng gym. Cả nhóm quyết định hội ngộ nhân dịp kỷ niệm 3 năm ngày cưới của Camy. Từ đây, những góc khuất trong cuộc sống riêng của từng người dần được hé lộ. Hội ế sẽ làm gì khi phát hiện ra những bí mật của mỗi thành viên lại là nguyên nhân khiến tình bạn của họ đối mặt với sóng gió.")
@@ -123,7 +123,7 @@ public class FilmService {
         .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("03/06/2022")).language(Language.VN).hasVietSubTitle(false)
         .lengthInMinutes(150).rating(Rating.C16)
         .thumbnail("https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/m/a/main-poster_bnn_copy_1_.jpg").build();
-    banNangHoangDai.addGenre(tamLy);
+    bayNgotNgao.addGenre(tamLy);
 
     em.persist(banTayDietQuy);
     em.persist(palmSpring);
