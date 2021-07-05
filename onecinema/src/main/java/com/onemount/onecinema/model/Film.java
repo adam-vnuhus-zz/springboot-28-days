@@ -58,6 +58,10 @@ public class Film {
 
   private String thumbnail;
 
+  private String movieBanner;
+
+  private String trailerBanner;
+
   @ManyToMany
   @JoinTable(
       name = "film_genre",
