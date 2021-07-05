@@ -51,36 +51,32 @@ public class FilmService {
                         "https://apiprod.amccinemas.com/incharge-assets/images/films/2928a78f-261e-4573-b9ba-79d1a1ec8d3d.jpeg?=1624451929617")
                 .movieBanner(
                         "https://apiprod.amccinemas.com/incharge-assets/images/films/9f213627-f2b5-487e-8db5-9cb254fdb26c.jpeg?=1624452045856")
-                .trailerBanner("https://www.youtube.com/embed/u0KzAdcYH_U")
-                .build();
+                .trailerBanner("https://www.youtube.com/embed/u0KzAdcYH_U").build();
         theIceRoad.addGenre(hanhDong);
         theIceRoad.addGenre(kinhDi);
 
         Film theBossBaby2 = Film.builder().title("THE BOSS BABY2: Family Business").description(
                 "The Templeton brothers have become adults and drifted away from each other, but a new boss baby with a cutting-edge approach is about to bring them together again - and inspire a new family business.")
-                .director("")
-                .actors("Amy Sedaris, James Marsden, Jeff Goldblum")
+                .director("").actors("Amy Sedaris, James Marsden, Jeff Goldblum")
                 .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("02/07/2021")).language(Language.VN)
                 .hasVietSubTitle(false).lengthInMinutes(128).rating(Rating.C13)
                 .thumbnail(
                         "https://apiprod.amccinemas.com/incharge-assets/images/films/1b094086-8efd-4376-a44c-111235faa0e3.png?=1608213379617")
-                .movieBanner("https://apiprod.amccinemas.com/incharge-assets/images/films/936f88ac-e28a-4a4e-825f-e06575104a29.png?=1608213393619")
-                .trailerBanner("https://www.youtube.com/embed/RJTVNLaaBb8")
-                .build();
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/936f88ac-e28a-4a4e-825f-e06575104a29.png?=1608213393619")
+                .trailerBanner("https://www.youtube.com/embed/RJTVNLaaBb8").build();
         theBossBaby2.addGenre(hai);
         theBossBaby2.addGenre(giaDinh);
 
         Film theForeverPurge = Film.builder().title("The Forever Purge").description(
                 "All the rules are broken as a sect of lawless marauders decides that the annual Purge does not stop at daybreak and instead should never end.")
-                .director("")
-                .actors("")
-                .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("01/08/2021")).language(Language.EN)
-                .hasVietSubTitle(true).lengthInMinutes(101).rating(Rating.C18)
+                .director("").actors("").beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("01/08/2021"))
+                .language(Language.EN).hasVietSubTitle(true).lengthInMinutes(101).rating(Rating.C18)
                 .thumbnail(
                         "https://apiprod.amccinemas.com/incharge-assets/images/films/57f78012-ee10-4327-bb47-f10b82e19c11.jpeg?=1622626414046")
-                .movieBanner("https://apiprod.amccinemas.com/incharge-assets/images/films/2f63ce56-98c2-41e4-9436-e63a1708e663.jpeg?=1622626444340")
-                .trailerBanner("https://www.youtube.com/embed/assb3AR1xNc")
-                .build();
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/2f63ce56-98c2-41e4-9436-e63a1708e663.jpeg?=1622626444340")
+                .trailerBanner("https://www.youtube.com/embed/assb3AR1xNc").build();
         theForeverPurge.addGenre(hanhDong);
         theForeverPurge.addGenre(hoiHop);
 
@@ -92,23 +88,22 @@ public class FilmService {
                 .hasVietSubTitle(true).lengthInMinutes(113).rating(Rating.C13)
                 .thumbnail(
                         "https://apiprod.amccinemas.com/incharge-assets/images/films/a45fb9b0-a893-421f-9bd0-e0b096bae13b.png?=1623319264879")
-                .movieBanner("https://apiprod.amccinemas.com/incharge-assets/images/films/3aed19ea-e483-4159-bb89-6944a6898de9.png?=1623319514707")
-                .trailerBanner("https://www.youtube.com/embed/Ex8u1tbPaAY")
-                .build();
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/3aed19ea-e483-4159-bb89-6944a6898de9.png?=1623319514707")
+                .trailerBanner("https://www.youtube.com/embed/Ex8u1tbPaAY").build();
         meshAna.addGenre(hanhDong);
         meshAna.addGenre(thanThoai);
 
         Film luca = Film.builder().title("Luca").description(
                 "On the Italian Riviera, an unlikely but strong friendship grows between a human being and a sea monster disguised as a human.")
-                .director("")
-                .actors("Jacob Tremblay, Maya Rudolph, Jack Dylan Grazer")
+                .director("").actors("Jacob Tremblay, Maya Rudolph, Jack Dylan Grazer")
                 .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("09/08/2021")).language(Language.EN)
                 .hasVietSubTitle(true).lengthInMinutes(108).rating(Rating.C16)
                 .thumbnail(
                         "https://apiprod.amccinemas.com/incharge-assets/images/films/f52ab1d4-a598-4510-8b31-c79abf792855.jpeg?=1621763493247")
-                .movieBanner("https://apiprod.amccinemas.com/incharge-assets/images/films/33d227ef-4b36-4597-a8aa-b60c25e0d7f7.jpeg?=1621763507982")
-                .trailerBanner("https://www.youtube.com/embed/t0nyTrMX9r4")
-                        .build();
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/33d227ef-4b36-4597-a8aa-b60c25e0d7f7.jpeg?=1621763507982")
+                .trailerBanner("https://www.youtube.com/embed/t0nyTrMX9r4").build();
         luca.addGenre(hoiHop);
         luca.addGenre(khoaHocVienTuong);
 
@@ -118,7 +113,8 @@ public class FilmService {
                 .director("Cate Shortland").actors("Scarlett Johansson, Florence Pugh, Robert Downey Jr...")
                 .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("09/07/2021")).language(Language.EN)
                 .hasVietSubTitle(true).lengthInMinutes(134).rating(Rating.C16)
-                .thumbnail("https://apiprod.amccinemas.com/incharge-assets/images/films/57c0ffb0-8ad8-4640-8b82-78994b4af318.png?=1599156992272")
+                .thumbnail(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/57c0ffb0-8ad8-4640-8b82-78994b4af318.png?=1599156992272")
                 .movieBanner(
                         "https://apiprod.amccinemas.com/incharge-assets/images/films/b6f00184-ab26-455b-8aec-a79fd194433a.jpeg?=1624266872429")
                 .trailerBanner("https://www.youtube.com/embed/ybji16u608U").build();
@@ -132,9 +128,9 @@ public class FilmService {
                 .hasVietSubTitle(false).lengthInMinutes(120).rating(Rating.C16)
                 .thumbnail(
                         "https://apiprod.amccinemas.com/incharge-assets/images/films/a3aa546f-4642-4ee9-bcef-ad47b0e08f29.png?=1621439600982")
-                .movieBanner("https://apiprod.amccinemas.com/incharge-assets/images/films/7ab581d9-adb9-456b-9271-f7f4240c8bc6.png?=1623874861664")
-                .trailerBanner("https://www.youtube.com/embed/9StEsJF7RMI")
-                        .build();
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/7ab581d9-adb9-456b-9271-f7f4240c8bc6.png?=1623874861664")
+                .trailerBanner("https://www.youtube.com/embed/9StEsJF7RMI").build();
         theHitman.addGenre(tinhCam);
         theHitman.addGenre(hai);
 
@@ -143,10 +139,11 @@ public class FilmService {
                 .director("").actors("Jasem AlNabhan, Abdo Chahine, Nassar AlNassar, Abdullah Elfiky, Racha Rezk")
                 .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("03/08/2021")).language(Language.VN)
                 .hasVietSubTitle(false).lengthInMinutes(150).rating(Rating.C16)
-                .thumbnail("https://apiprod.amccinemas.com/incharge-assets/images/films/60c1fe52-c1c3-4f04-a329-cfde220b57bb.jpeg?=1622712596043")
-                .movieBanner("https://apiprod.amccinemas.com/incharge-assets/images/films/d58a67a5-e267-4d2c-bc1b-14fbdcd657ba.jpeg?=1623955997023")
-                .trailerBanner("https://www.youtube.com/embed/8smeLqEp84s")
-                .build();
+                .thumbnail(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/60c1fe52-c1c3-4f04-a329-cfde220b57bb.jpeg?=1622712596043")
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/d58a67a5-e267-4d2c-bc1b-14fbdcd657ba.jpeg?=1623955997023")
+                .trailerBanner("https://www.youtube.com/embed/8smeLqEp84s").build();
         theJourney.addGenre(tamLy);
 
         Film aQuietPlacePartII = Film.builder().title("A Quiet Place Part II").description(
@@ -209,6 +206,69 @@ public class FilmService {
                 .trailerBanner("https://www.youtube.com/embed/hOXcELqrCgM").build();
         fastFurious9.addGenre(tamLy);
 
+        Film wrathOfMan = Film.builder().title("Wrath Of Man").description(
+                "After a deadly ambush on one of its armored cars, Los Angeles-based Fortico Securities hires a mysterious new employee, Patrick Hill (Statham), who becomes known simply as “H.” As he learns the ropes from partner Bullet (Holt McCallany), H initially appears to be a quiet, keep-your-head down type simply there to do a job and earn a living. But when he and Bullet become the targets of an attempted robbery, H’s formidable skills are revealed. Not only is he an expert marksman who’s equally adept at hand-to-hand combat, but H is also fearless, ruthless and lethal.")
+                .director("")
+                .actors("Niamh Algar, Holt McCallany, Josh Hartnett, Jason Statham, Laz Alonso, Jeffrey Donovan")
+                .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("09/08/2021")).language(Language.VN)
+                .hasVietSubTitle(false).lengthInMinutes(150).rating(Rating.C16)
+                .thumbnail(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/609fbcba-c8bf-43d5-81c7-62fd899225a3.jpeg?=1618302732191")
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/bc34eccd-ec6f-436b-98cc-937ada916c12.jpeg?=1618302750366")
+                .trailerBanner("https://www.youtube.com/embed/RyTBU8fRgdM").build();
+        wrathOfMan.addGenre(tamLy);
+
+        Film tomJerry = Film.builder().title("Tom & Jerry").description(
+                "One of the most beloved rivalries in history is reignited when Jerry moves into New York City’s finest hotel on the eve of “the wedding of the century,” forcing the event’s desperate planner to hire Tom to get rid of him, in director Tim Story’s “Tom & Jerry.” The ensuing cat and mouse battle threatens to destroy her career, the wedding and possibly the hotel itself. But soon, an even bigger problem arises: a diabolically ambitious staffer conspiring against all three of them. An eye-popping blend of classic animation and live action, Tom and Jerry’s new big-screen adventure stakes new ground for the iconic characters and forces them to do the unthinkable… work together to save the day.")
+                .director("").actors("Michael Peña, Colin Jost, Rob Delaney, Chloë Grace Moretz")
+                .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("10/08/2021")).language(Language.VN)
+                .hasVietSubTitle(false).lengthInMinutes(150).rating(Rating.C16)
+                .thumbnail(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/506738fb-a04f-4f95-9ba7-f6eee926a9f8.jpeg?=1610871843622")
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/48611b80-fb9d-4c96-9611-35aa7eb51f2b.jpeg?=1610871855456")
+                .trailerBanner("https://www.youtube.com/embed/WMGn9C1pMwI").build();
+        tomJerry.addGenre(tamLy);
+
+        Film waafetReggaala = Film.builder().title("Waafet Reggaala").description(
+                "After years of estrangement, a group of long-time friends reunite, to help one of their own out of crisis. The journey takes them to a coastal resort, where events escalate.")
+                .director("").actors("Maged El Kidwany, Amina Khalil, Sayyed Ragab")
+                .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("12/08/2021")).language(Language.VN)
+                .hasVietSubTitle(false).lengthInMinutes(150).rating(Rating.C16)
+                .thumbnail(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/4b3b8509-af79-4ce7-94b8-dd95576b4dc5.png?=1609754928757")
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/41fcd2d0-de05-4d42-83db-c67ef9428a6c.png?=1609754938478")
+                .trailerBanner("https://www.youtube.com/embed/NStn-ztCHIA").build();
+        waafetReggaala.addGenre(tamLy);
+
+        Film theMisfits = Film.builder().title("The Misfits").description(
+                "A group of unconventional thieves recruit Richard Pearce to help steal millions in gold bars stashed underneath one of the world's most secure prisons. From LA to Abu Dhabi, it will take supercharged engines, forged identities, camels, nitro and massive explosions to succeed.")
+                .director("")
+                .actors("Jamie Chung, Tim Roth, Hermione Corfield, Pirat Nitipaisalkul, Nick Cannon , Pierce Brosnan, Rami Jaber, Pierce Brosnan., Mike Angelo")
+                .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("14/08/2021")).language(Language.VN)
+                .hasVietSubTitle(false).lengthInMinutes(150).rating(Rating.C16)
+                .thumbnail(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/44b88a15-7b1e-44e6-96a2-6bc7c71ead13.jpeg?=1624197167031")
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/ffd41d11-efaa-419c-9baf-4ea8d462b7b3.jpeg?=1624197226909")
+                .trailerBanner("https://www.youtube.com/embed/szTa-XLwSQY").build();
+        theMisfits.addGenre(tamLy);
+
+        Film jolt = Film.builder().title("JOLT").description(
+                "A woman with severe anger issues uses a special electrode device to zap herself anytime she feels the urge to brutally murder someone. When a man she falls for is murdered, she becomes determined to bring the culprits to justice.")
+                .director("")
+                .actors("Bobby Cannavale, Kate Beckinsale, Stanley Tucci, Susan Sarandon , Jai Courtney")
+                .beginShowDate(new SimpleDateFormat(DD_MM_YYYY).parse("15/08/2021")).language(Language.VN)
+                .hasVietSubTitle(false).lengthInMinutes(150).rating(Rating.C16)
+                .thumbnail(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/7b3507ba-c764-450f-b66c-6e6e50334f84.jpeg?=1625388960044")
+                .movieBanner(
+                        "https://apiprod.amccinemas.com/incharge-assets/images/films/f63fde4e-787a-4e5f-9a37-b0f935a5e6e0.jpeg?=1625388989797")
+                .trailerBanner("https://www.youtube.com/embed/uov0ZxJ2QHE").build();
+        jolt.addGenre(tamLy);
+
         em.persist(theIceRoad);
         em.persist(theBossBaby2);
         em.persist(theForeverPurge);
@@ -222,6 +282,11 @@ public class FilmService {
         em.persist(theConjuring3);
         em.persist(cruella);
         em.persist(fastFurious9);
+        em.persist(wrathOfMan);
+        em.persist(tomJerry);
+        em.persist(waafetReggaala);
+        em.persist(theMisfits);
+        em.persist(jolt);
     }
 
     public List<Film> findAll() {
