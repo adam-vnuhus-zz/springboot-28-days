@@ -24,8 +24,8 @@ public class EmailController {
     @Autowired
     EmailService emailService;
 
-    @Operation(summary = "Sent emails to confirm order")
     @PostMapping(value = "/emails")
+    @Operation(summary = "Sent emails to confirm order")
     public @ResponseBody ResponseEntity<String> sendSimpleEmail(@RequestBody EmailRequest emailRequest) {
         try {
             emailService.sendSimpleEmail(emailRequest.getEmail(), "Order Confirmation!!!",
