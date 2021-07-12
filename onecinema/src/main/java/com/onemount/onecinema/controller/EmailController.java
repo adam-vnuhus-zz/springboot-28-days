@@ -7,6 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.*;
+
+import io.swagger.v3.oas.annotations.Operation;
+
 import javax.mail.MessagingException;
 
 import com.onemount.onecinema.request.EmailRequest;
@@ -21,18 +24,19 @@ public class EmailController {
     @Autowired
     EmailService emailService;
 
+    @Operation(summary = "Sent emails to confirm order")
     @PostMapping(value = "/emails")
     public @ResponseBody ResponseEntity<String> sendSimpleEmail(@RequestBody EmailRequest emailRequest) {
         try {
             emailService.sendSimpleEmail(emailRequest.getEmail(), "Order Confirmation!!!",
-                    "Thanks for your recent order: \n"
-                            + "Your film: " + emailRequest.getFilmTitle() + "\n"
-                    + "Date: " + emailRequest.getDate() + "\n");
+                    "Thanks for your recent order: \n" + "Your film: " + emailRequest.getFilmTitle() + "\n" + "Date: "
+                            + emailRequest.getDate() + "\n");
         } catch (MailException mailException) {
             LOG.error("Error while sending out email..{}", mailException.getStackTrace());
             LOG.error("Error while sending out email..{}", mailException.fillInStackTrace());
             return new ResponseEntity<>("Unable to send email", HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<>("Please check your inbox", HttpStatus.OK);
+        // return new ResponseEntity<>("Please check your inbox", HttpStatus.OK);
+        return ResponseEntity.ok().body("Please check your inbox!!!");
     }
 }
